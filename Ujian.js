@@ -406,7 +406,7 @@ const questions = [
   }
 ];
 
-let timeLeft = 5400; // 90 menit dalam detik
+let timeLeft = 4800; // 90 menit dalam detik
 const timerDisplay = document.getElementById("timer");
 
 const timer = setInterval(() => {
@@ -468,7 +468,8 @@ function submitQuiz() {
   }
 
   const finalScore = Math.round((score / totalQuestions) * 100);
-  feedback = `Skor kamu: ${finalScore}`;
+  const salah = totalQuestions - score;
+  feedback = `Skor kamu: ${finalScore}\nSalah: ${salah}`;
   document.getElementById("result").innerText = feedback;
 
   quizSubmitted = true;
