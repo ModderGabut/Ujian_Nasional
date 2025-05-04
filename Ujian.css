@@ -1,0 +1,132 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #c2e9fb, #a1c4fd);
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  background: #fff0f5; /* Lavender blush */
+  border-left: 5px solid #ff5c8a; /* Lebih gelap dari gradien */
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  border-left: 5px solid #6c63ff;
+  border-right: 5px solid #6c63ff;
+  transition: transform 0.3s;
+}
+
+#container:hover {
+  transform: scale(1.01);
+}
+
+h1 {
+  text-align: center;
+  color: #9400D3;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 2.5em;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  margin-top: 20px;
+  padding: 10px;
+  border-bottom: 3px solid #483D8B;
+  border-top: 3px solid #483D8B;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Animasi smooth saat masuk */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.question {
+  margin-bottom: 20px;
+}
+
+.options {
+  list-style: none;
+  padding-left: 0;
+}
+
+.options li {
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  margin-top: 20px;
+  cursor: pointer;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.result {
+  margin-top: 30px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.alert {
+  text-align: center;
+  font-size: 18px;
+  color: #721c24;
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  padding: 15px 20px;
+  border-radius: 8px;
+  margin: 10px auto;
+  width: fit-content;
+  max-width: 80%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.alert.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.timer {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #ff4d4d;
+  padding: 10px 20px;
+  border-radius: 12px;
+  width: fit-content;
+  margin: 15px auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.5s ease;
+}
+
+#soal {
+  text-align: center;
+  color: black;
+  font-style: bold;
+}
+
+#logoo {
+  display: block;
+  margin: 40px auto; /* Tengah horizontal + beri jarak dari atas */
+  height: 100px;
+  width: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#logoo:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+}

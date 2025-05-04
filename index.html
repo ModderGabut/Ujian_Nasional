@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <style>
+      body { 
+        font-family: Arial, sans-serif; 
+        height: 100vh; 
+        display: flex; 
+        flex-direction: column;
+        justify-content: center; 
+        align-items: center; 
+        margin: 0;
+  
+        background: linear-gradient(135deg, #e0f7fa, #b2ebf2); /* gradasi biru muda */
+        color: #333; /* warna teks gelap agar mudah dibaca */
+      }
+        .running-text {
+            width: 100%;
+            overflow: hidden;
+            background: transparant;
+            color: black;
+            padding: 15px 0;
+            position: relative;
+            box-shadow: 0 4px 15px rgba(0, 255, 255, 0.7);
+            text-align: center;
+        }
+        .running-text span {
+            display: inline-block;
+            white-space: nowrap;
+            padding-left: 100%;
+            animation: running-text 10s linear infinite;
+            font-size: 24px;
+            text-shadow: 2px 2px 5px rgba(0, 255, 255, 0.8);
+        }
+        @keyframes running-text {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+        form { 
+            background: white;
+            padding: 30px; 
+            border-radius: 10px; 
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
+            width: 300px;
+            margin-top: 20px;
+        }
+        input[type="password"] { 
+            width: 100%; 
+            padding: 10px; 
+            margin: 15px 0; 
+            box-sizing: border-box;
+        }
+        button { 
+            width: 100%;
+            padding: 10px; 
+            background: #3498db; 
+            color: white; 
+            border: none; 
+            border-radius: 5px; 
+            cursor: pointer;
+        }
+        h2 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        #po0 {
+            text-align: center;
+        }
+        .pass {
+            font-size: 5px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="running-text">
+    <span>© SD Griyo Wingking, Magetan, Jatim</span>
+</div>
+
+<form action="proses_login.php" method="post">
+    <h2 id="po0">Login To (Data Diri Siswa)</h2>
+    <input type="password" name="password" placeholder="Masukkan Password" required>
+    <button type="submit">Login</button>
+    <h5 class="pass">untuk passwordnya tanya ke pendamping masing-masing (pw:SASonline123) </h5>
+</form>
+
+</body>
+</html>
